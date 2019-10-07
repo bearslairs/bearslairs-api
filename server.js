@@ -13,16 +13,13 @@ app.use(logger('dev')); // Log requests to API using morgan
 app.use(cors());
 
 // Routes
-app.post('/api/rooms', function(req, res) {
+app.post('/api/units', function(req, res) {
   db.Unit.find({
-    type: req.body.roomType,
-    beds: req.body.beds,
-    max_occupancy: {$gt: req.body.guests},
-    cost_per_night: {$gte: req.body.priceRange.lower, $lte: req.body.priceRange.upper},
-    reserved: {
-      //Check if any of the dates the room has been reserved for overlap with the requsted dates
+    //name: req.body.roomType,
+    reservations: {
+      //Check if any of the dates the unit has been reserved for overlap with the requested dates
       $not: {
-        $elemMatch: {from: {$lt: req.body.to.substring(0,10)}, to: {$gt: req.body.from.substring(0,10)}}
+        $elemMatch: {start: {$lt: req.body.end}, end: {$gt: req.body.start}}
       }
     }
   }, function(err, rooms){
@@ -33,13 +30,18 @@ app.post('/api/rooms', function(req, res) {
     }
   });
 });
-app.post('/api/rooms/reserve', function(req, res) {
+app.post('/api/units/reserve', function(req, res) {
   console.log(req.body._id);
   db.Unit.findByIdAndUpdate(req.body._id, {
-      $push: {"reserved": {from: req.body.from, to: req.body.to}}
+    $push: {
+      reservations: {
+        start: req.body.start,
+        end: req.body.end
+      }
+    }
   }, {
-      safe: true,
-      new: true
+    safe: true,
+    new: true
   }, function(err, room){
     if(err){
       res.send(err);
@@ -50,5 +52,5 @@ app.post('/api/rooms/reserve', function(req, res) {
 });
 
 // listen
-app.listen(${port});
+app.listen(8080);
 console.log("api listening on port ${port}");
