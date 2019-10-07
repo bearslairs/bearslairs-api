@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Gramadeto",
+    "sectors": [
+      {
+        "name": "A",
+        "units": [
+          {
+            "name": "01",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "02",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "03",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "04",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "05",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "06",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "07",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "08",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "09",
+            "size": {
+              "depth": 2,
+              "height": 2.3,
+              "width": 8
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          }
+        ]
+      },
+      {
+        "name": "B",
+        "units": [
+          {
+            "name": "01",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "02",
+            "size": {
+              "depth": 4,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "03",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "04",
+            "size": {
+              "depth": 4,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "05",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "06",
+            "size": {
+              "depth": 4,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          },
+          {
+            "name": "07",
+            "size": {
+              "depth": 3,
+              "height": 2.3,
+              "width": 2
+            },
+            "door": {
+              "height": 2,
+              "width": 1.2
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
