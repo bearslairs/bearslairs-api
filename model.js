@@ -295,9 +295,9 @@ model.Reservation.countDocuments({}, function(err, count) {
         },
         function (ruE, reservableUnit) {
           if (ruE) {
+            // todo: handle error
             console.log(`reservable unit (${want.size.depth} × ${want.size.height} × ${want.size.width}) not found.`);
-          } else {
-            //console.log(`reservation created for: ${reservation.start} to ${reservation.end}, in unit: ${reservableUnit.name}, for customer: ${randomCustomer.name}, with id: ${rD._id}.`);
+          } else if (reservableUnit) {            //console.log(`reservable unit (${want.size.depth} × ${want.size.height} × ${want.size.width}) found with id: ${reservableUnit._id}.`);
             console.log(`reservable unit (${want.size.depth} × ${want.size.height} × ${want.size.width}) found with id: ${reservableUnit._id}.`);
 
             // select a random customer for our generated reservation
@@ -343,6 +343,8 @@ model.Reservation.countDocuments({}, function(err, count) {
                 );
               }
             });
+          } else {
+            console.log(`reservable unit (${want.size.depth} × ${want.size.height} × ${want.size.width}) not found.`);
           }
         }
       );

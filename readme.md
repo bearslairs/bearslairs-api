@@ -26,7 +26,7 @@ enable and start the mongod service:
 sudo systemctl enable mongod.service
 sudo systemctl start mongod.service
 ```
-configure the replset:
+configure the replset ([replset tut](https://devops.ionos.com/tutorials/configure-mongodb-replica-set/)):
 ```
 mongo
 rs.initiate()
