@@ -4,7 +4,7 @@ var app        = express();
 var logger     = require('morgan');
 var bodyParser = require('body-parser');
 var cors       = require('cors');
-var db         = require('./database');
+var model      = require('./model');
 const config   = require('./config'), { api: { port } } = config;
 
 app.use(bodyParser.urlencoded({ extended: false })); // Parses urlencoded bodies
@@ -14,7 +14,7 @@ app.use(cors());
 
 // Routes
 app.post('/api/units', function(req, res) {
-  db.Unit.find({
+  model.Unit.find({
     //name: req.body.roomType,
     reservations: {
       //Check if any of the dates the unit has been reserved for overlap with the requested dates
@@ -32,7 +32,7 @@ app.post('/api/units', function(req, res) {
 });
 app.post('/api/units/reserve', function(req, res) {
   console.log(req.body._id);
-  db.Unit.findByIdAndUpdate(req.body._id, {
+  model.Unit.findByIdAndUpdate(req.body._id, {
     $push: {
       reservations: {
         start: req.body.start,
